@@ -4,7 +4,6 @@ import argparse
 from pathlib import Path
 from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
-
 FILES = (
     "LICENSE",
     "README.md",

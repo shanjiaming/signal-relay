@@ -18,3 +18,9 @@ From this directory, run `python3 -m http.server 8000 --bind 127.0.0.1` and open
 Run `node --test engine.test.mjs` to check scoring, two-player input, solvability and the timer. Run `python3 build_release.py signal-relay.zip` to build a byte-reproducible ZIP with the playable game and source. Extract the ZIP and serve the extracted directory the same way.
 
 The game uses original code, graphics, and synthesized tones. AI coding agents assisted implementation and testing.
+
+## Development tools
+
+The game source and release exporter were formatted with JetBrains PyCharm 2026.3.0.1. After formatting, the engine tests and browser smoke test were run again.
+
+[Play the hosted build](https://shanjiaming.github.io/signal-relay/)

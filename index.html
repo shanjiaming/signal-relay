@@ -1,64 +1,68 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#091210">
     <title>Signal Relay</title>
     <link rel="stylesheet" href="./style.css">
     <script type="module" src="./game.mjs"></script>
-  </head>
-  <body>
-    <main class="console">
-      <header class="masthead">
+</head>
+<body>
+<main class="console">
+    <header class="masthead">
         <div>
-          <h1>Signal Relay</h1>
-          <p>Two players. Keep the signal moving.</p>
+            <h1>Signal Relay</h1>
+            <p>Two players. Keep the signal moving.</p>
         </div>
         <button class="sound" id="sound" type="button" aria-pressed="false">Sound off</button>
-      </header>
+    </header>
 
-      <section class="playfield" aria-label="Relay board">
+    <section class="playfield" aria-label="Relay board">
         <div class="scoreboard">
-          <div>
-            <span class="stat-label">Signals</span>
-            <output id="score" aria-live="off">00</output>
-          </div>
-          <div class="timer">
-            <span class="stat-label">Time left</span>
-            <output id="clock" aria-live="off">45<span>.0</span></output>
-          </div>
-          <div>
-            <span class="stat-label">Lane</span>
-            <output id="lane" aria-live="off">01</output>
-          </div>
+            <div>
+                <span class="stat-label">Signals</span>
+                <output id="score" aria-live="off">00</output>
+            </div>
+            <div class="timer">
+                <span class="stat-label">Time left</span>
+                <output id="clock" aria-live="off">45<span>.0</span></output>
+            </div>
+            <div>
+                <span class="stat-label">Lane</span>
+                <output id="lane" aria-live="off">01</output>
+            </div>
         </div>
         <canvas id="board" width="560" height="560" aria-hidden="true"></canvas>
         <div class="progress" aria-hidden="true"><span id="time-bar"></span></div>
-      </section>
+    </section>
 
-      <div class="crew">
+    <div class="crew">
         <section class="station inner" aria-label="Inner ring controls">
-          <h2><span></span>Inner ring</h2>
-          <div class="controls">
-            <button type="button" data-ring="inner" data-turn="-1" aria-label="Turn inner ring counterclockwise"><span aria-hidden="true">↶</span><kbd>A</kbd></button>
-            <button type="button" data-ring="inner" data-turn="1" aria-label="Turn inner ring clockwise"><span aria-hidden="true">↷</span><kbd>D</kbd></button>
-          </div>
+            <h2><span></span>Inner ring</h2>
+            <div class="controls">
+                <button type="button" data-ring="inner" data-turn="-1" aria-label="Turn inner ring counterclockwise">
+                    <span aria-hidden="true">↶</span><kbd>A</kbd></button>
+                <button type="button" data-ring="inner" data-turn="1" aria-label="Turn inner ring clockwise"><span
+                        aria-hidden="true">↷</span><kbd>D</kbd></button>
+            </div>
         </section>
         <section class="station outer" aria-label="Outer ring controls">
-          <h2><span></span>Outer ring</h2>
-          <div class="controls">
-            <button type="button" data-ring="outer" data-turn="-1" aria-label="Turn outer ring counterclockwise"><span aria-hidden="true">↶</span><kbd>J</kbd></button>
-            <button type="button" data-ring="outer" data-turn="1" aria-label="Turn outer ring clockwise"><span aria-hidden="true">↷</span><kbd>L</kbd></button>
-          </div>
+            <h2><span></span>Outer ring</h2>
+            <div class="controls">
+                <button type="button" data-ring="outer" data-turn="-1" aria-label="Turn outer ring counterclockwise">
+                    <span aria-hidden="true">↶</span><kbd>J</kbd></button>
+                <button type="button" data-ring="outer" data-turn="1" aria-label="Turn outer ring clockwise"><span
+                        aria-hidden="true">↷</span><kbd>L</kbd></button>
+            </div>
         </section>
-      </div>
+    </div>
 
-      <footer class="bottom">
+    <footer class="bottom">
         <p id="instructions">Line up both gaps with the marked lane before time runs out.</p>
         <button id="start" class="primary" type="button">Start relay</button>
-      </footer>
-      <p id="announcement" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p>
-    </main>
-  </body>
+    </footer>
+    <p id="announcement" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p>
+</main>
+</body>
 </html>

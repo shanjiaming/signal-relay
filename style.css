@@ -1,329 +1,329 @@
 :root {
-  color-scheme: dark;
-  --page: #091210;
-  --panel: #101c19;
-  --line: #38564c;
-  --ink: #f5faed;
-  --muted: #b3c7c0;
-  --mint: #8ef0bd;
-  --amber: #ffd07d;
-  --marker: #f6ff9b;
+    color-scheme: dark;
+    --page: #091210;
+    --panel: #101c19;
+    --line: #38564c;
+    --ink: #f5faed;
+    --muted: #b3c7c0;
+    --mint: #8ef0bd;
+    --amber: #ffd07d;
+    --marker: #f6ff9b;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  min-height: 100svh;
-  margin: 0;
-  background: radial-gradient(ellipse at 47% 30%, #1b3029 0%, var(--page) 67%);
-  color: var(--ink);
-  font-family: Inter, system-ui, sans-serif;
+    min-height: 100svh;
+    margin: 0;
+    background: radial-gradient(ellipse at 47% 30%, #1b3029 0%, var(--page) 67%);
+    color: var(--ink);
+    font-family: Inter, system-ui, sans-serif;
 }
 
 .console {
-  width: min(calc(100% - 32px), 680px);
-  margin: 0 auto;
-  padding: clamp(16px, 3.6vh, 44px) 0;
+    width: min(calc(100% - 32px), 680px);
+    margin: 0 auto;
+    padding: clamp(16px, 3.6vh, 44px) 0;
 }
 
 .masthead,
 .scoreboard,
 .bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
 }
 
 h1,
 h2,
 p {
-  margin: 0;
+    margin: 0;
 }
 
 h1 {
-  font-size: clamp(2rem, 6vw, 3.3rem);
-  font-weight: 800;
-  letter-spacing: -0.075em;
-  line-height: 0.98;
+    font-size: clamp(2rem, 6vw, 3.3rem);
+    font-weight: 800;
+    letter-spacing: -0.075em;
+    line-height: 0.98;
 }
 
 .masthead p,
 .bottom p {
-  margin-top: 7px;
-  color: var(--muted);
-  font-size: clamp(0.8rem, 2.2vw, 0.98rem);
-  line-height: 1.4;
+    margin-top: 7px;
+    color: var(--muted);
+    font-size: clamp(0.8rem, 2.2vw, 0.98rem);
+    line-height: 1.4;
 }
 
 button {
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: #13221d;
-  color: var(--ink);
-  font: inherit;
-  cursor: pointer;
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: #13221d;
+    color: var(--ink);
+    font: inherit;
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 button:hover {
-  border-color: var(--marker);
+    border-color: var(--marker);
 }
 
 button:focus-visible {
-  outline: 2px solid var(--marker);
-  outline-offset: 4px;
+    outline: 2px solid var(--marker);
+    outline-offset: 4px;
 }
 
 button:disabled {
-  opacity: 0.64;
-  cursor: default;
+    opacity: 0.64;
+    cursor: default;
 }
 
 button:disabled:hover {
-  border-color: var(--line);
+    border-color: var(--line);
 }
 
 .sound {
-  min-height: 42px;
-  padding: 0 11px;
-  white-space: nowrap;
-  font-size: 0.78rem;
+    min-height: 42px;
+    padding: 0 11px;
+    white-space: nowrap;
+    font-size: 0.78rem;
 }
 
 .playfield {
-  margin-top: clamp(14px, 2.8vh, 26px);
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 15px;
-  background: linear-gradient(180deg, #14241e, #0d1915 65%);
-  box-shadow: 0 16px 48px #02070470;
+    margin-top: clamp(14px, 2.8vh, 26px);
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 15px;
+    background: linear-gradient(180deg, #14241e, #0d1915 65%);
+    box-shadow: 0 16px 48px #02070470;
 }
 
 .scoreboard {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: start;
-  margin: 0 15px;
-  padding: 13px 7px 11px;
-  border-bottom: 1px solid #2c483d;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    margin: 0 15px;
+    padding: 13px 7px 11px;
+    border-bottom: 1px solid #2c483d;
 }
 
 .scoreboard > div {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
 }
 
 .scoreboard > div:nth-child(2) {
-  text-align: center;
+    text-align: center;
 }
 
 .scoreboard > div:last-child {
-  text-align: right;
+    text-align: right;
 }
 
 .stat-label,
 output,
 kbd {
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-variant-numeric: tabular-nums;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
 }
 
 .stat-label {
-  color: var(--muted);
-  font-size: 0.69rem;
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
+    color: var(--muted);
+    font-size: 0.69rem;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
 }
 
 output {
-  font-size: clamp(1.45rem, 4.6vw, 2.1rem);
-  font-weight: 700;
-  line-height: 1;
+    font-size: clamp(1.45rem, 4.6vw, 2.1rem);
+    font-weight: 700;
+    line-height: 1;
 }
 
 #clock > span {
-  font-size: 0.65em;
+    font-size: 0.65em;
 }
 
 .timer.urgent output {
-  color: var(--amber);
+    color: var(--amber);
 }
 
 #lane {
-  color: var(--marker);
+    color: var(--marker);
 }
 
 #board {
-  display: block;
-  width: min(100%, 49vh, 400px);
-  height: auto;
-  margin: 2px auto;
+    display: block;
+    width: min(100%, 49vh, 400px);
+    height: auto;
+    margin: 2px auto;
 }
 
 .progress {
-  height: 4px;
-  background: #273a2c;
+    height: 4px;
+    background: #273a2c;
 }
 
 .progress span {
-  display: block;
-  height: 100%;
-  background: var(--marker);
-  transform-origin: left;
+    display: block;
+    height: 100%;
+    background: var(--marker);
+    transform-origin: left;
 }
 
 .crew {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 11px;
-  margin-top: 11px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 11px;
+    margin-top: 11px;
 }
 
 .station {
-  --ring: var(--mint);
-  padding: 8px 10px 10px;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: var(--panel);
+    --ring: var(--mint);
+    padding: 8px 10px 10px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--panel);
 }
 
 .station.outer {
-  --ring: var(--amber);
+    --ring: var(--amber);
 }
 
 .station h2 {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  margin: 0 0 7px;
-  color: var(--ring);
-  font-size: 0.8rem;
-  line-height: 1.1;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 0 0 7px;
+    color: var(--ring);
+    font-size: 0.8rem;
+    line-height: 1.1;
 }
 
 .station h2 span {
-  width: 8px;
-  height: 8px;
-  border: 1px solid currentColor;
+    width: 8px;
+    height: 8px;
+    border: 1px solid currentColor;
 }
 
 .inner h2 span {
-  border-radius: 50%;
+    border-radius: 50%;
 }
 
 .controls {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 7px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
 }
 
 .controls button {
-  display: flex;
-  min-height: 42px;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
+    display: flex;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
 }
 
 .controls button span {
-  font-size: 1.32rem;
-  line-height: 1;
+    font-size: 1.32rem;
+    line-height: 1;
 }
 
 .controls button:active,
 .controls button.pressed {
-  color: var(--page);
-  border-color: var(--ring);
-  background: var(--ring);
+    color: var(--page);
+    border-color: var(--ring);
+    background: var(--ring);
 }
 
 kbd {
-  min-width: 17px;
-  font-size: 0.73rem;
+    min-width: 17px;
+    font-size: 0.73rem;
 }
 
 .bottom {
-  margin-top: 13px;
+    margin-top: 13px;
 }
 
 .bottom p {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .primary {
-  flex: 0 0 auto;
-  min-height: 44px;
-  padding: 0 14px;
-  border-color: var(--marker);
-  background: var(--marker);
-  color: #162119;
-  font-size: 0.88rem;
-  font-weight: 750;
+    flex: 0 0 auto;
+    min-height: 44px;
+    padding: 0 14px;
+    border-color: var(--marker);
+    background: var(--marker);
+    color: #162119;
+    font-size: 0.88rem;
+    font-weight: 750;
 }
 
 .primary:hover {
-  background: #fbffd4;
+    background: #fbffd4;
 }
 
 .primary[hidden] {
-  display: none;
+    display: none;
 }
 
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  white-space: nowrap;
-  clip-path: inset(100%);
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    clip-path: inset(100%);
 }
 
 @media (max-width: 420px) {
-  .console {
-    width: calc(100% - 22px);
-  }
+    .console {
+        width: calc(100% - 22px);
+    }
 
-  .station {
-    padding-inline: 7px;
-  }
+    .station {
+        padding-inline: 7px;
+    }
 
-  .controls button {
-    min-height: 46px;
-  }
+    .controls button {
+        min-height: 46px;
+    }
 }
 
 @media (max-height: 680px) and (orientation: landscape) {
-  .console {
-    display: grid;
-    width: min(calc(100% - 28px), 790px);
-    grid-template-columns: minmax(265px, 1fr) minmax(205px, 0.8fr);
-    gap: 10px 16px;
-    padding: 10px 0;
-  }
+    .console {
+        display: grid;
+        width: min(calc(100% - 28px), 790px);
+        grid-template-columns: minmax(265px, 1fr) minmax(205px, 0.8fr);
+        gap: 10px 16px;
+        padding: 10px 0;
+    }
 
-  .masthead {
-    grid-column: 1 / -1;
-  }
+    .masthead {
+        grid-column: 1 / -1;
+    }
 
-  .playfield {
-    grid-row: span 2;
-    margin-top: 0;
-  }
+    .playfield {
+        grid-row: span 2;
+        margin-top: 0;
+    }
 
-  .crew {
-    grid-template-columns: 1fr;
-    align-content: center;
-    margin-top: 0;
-  }
+    .crew {
+        grid-template-columns: 1fr;
+        align-content: center;
+        margin-top: 0;
+    }
 
-  .bottom {
-    flex-wrap: wrap;
-    align-content: start;
-    margin-top: 0;
-  }
+    .bottom {
+        flex-wrap: wrap;
+        align-content: start;
+        margin-top: 0;
+    }
 }
